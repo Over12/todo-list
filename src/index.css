@@ -9,17 +9,17 @@
 }
 
 :root {
-  --text: #04201a;
-  --background: #fbfefe;
-  --primary: #2ce2a9;
-  --secondary: #d17ded;
-  --accent: #e95daf;
+  --text: #0e1511;
+  --background: #f9fbfa;
+  --primary: #6aa084;
+  --secondary: #b1c6cd;
+  --accent: #8da5b4;
 }
 
 .dark {
-  --text: #dffbf5;
-  --background: #010404;
-  --primary: #1dd399;
-  --secondary: #661282;
-  --accent: #a21667;
+  --text: #eaf1ed;
+  --background: #040605;
+  --primary: #5f9579;
+  --secondary: #32474e;
+  --accent: #4b6372;
 }
