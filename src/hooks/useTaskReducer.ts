@@ -5,8 +5,14 @@ import type { Task } from '../types/task'
 export const useTaskReducer = () => {
   const [tasks, dispatch] = useReducer(taskReducer, initialTasks)
 
-  const addTask = (task: Task) => {
-    dispatch({ type: 'ADD_TASK', payload: task })
+  const addTask = (taskContent: string) => {
+    const newTask = {
+      id: Date.now(),
+      content: taskContent,
+      completed: false
+    }
+
+    dispatch({ type: 'ADD_TASK', payload: newTask })
   }
 
   const removeTask = (task: Task) => {
