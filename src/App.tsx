@@ -1,3 +1,4 @@
+import Contact from './components/ui/Contact'
 import Home from './components/ui/Home'
 import NavBar from './components/ui/NavBar'
 
@@ -6,6 +7,7 @@ function App() {
     <>
       <NavBar />
       <Home />
+      <Contact />
     </>
   )
 }
