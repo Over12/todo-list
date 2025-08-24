@@ -15,7 +15,7 @@ export default function Contact() {
           <label htmlFor='mensaje' className='font-semibold'>Mensaje:</label>
           <textarea name='mensaje' id='mensaje' placeholder='Ingrese su mensaje...' required className='resize-none min-h-24 px-2 py-1 rounded-md border-2 border-accent placeholder:text-text/50 focus:outline-none focus:border-primary transition-colors' />
         </div>
-        <button className='uppercase bg-accent px-3 py-2 rounded-md cursor-pointer hover:bg-primary transition-colors'>
+        <button type='submit' className='uppercase bg-accent px-3 py-2 rounded-md cursor-pointer hover:bg-primary transition-colors'>
           Enviar
         </button>
       </form>
