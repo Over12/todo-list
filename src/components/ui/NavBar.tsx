@@ -33,7 +33,7 @@ export default function NavBar() {
           {menuOpen ? <IconX className='size-9 text-text' /> : <IconMenuDeep className='size-9 text-text' />}
         </button>
       </nav>
-      <ul className={`fixed sm:hidden top-0 right-0 bottom-0 z-40 h-dvh w-dvw bg-background text-text flex flex-col justify-center items-center gap-10 text-xl font-semibold transition-transform duration-500 ${menuOpen ? 'translate-x-0' : 'translate-x-full'}`}>
+      <ul className={`fixed sm:hidden top-0 right-0 bottom-0 z-40 h-dvh w-dvw uppercase bg-background text-text flex flex-col justify-center items-center gap-10 text-xl font-semibold transition-transform duration-500 ${menuOpen ? 'translate-x-0' : 'translate-x-full'}`}>
         <Navigation />
       </ul>
     </>
