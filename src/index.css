@@ -24,3 +24,7 @@
   --secondary: #32474e;
   --accent: #4b6372;
 }
+
+::-webkit-scrollbar {
+  width: 0;
+}
