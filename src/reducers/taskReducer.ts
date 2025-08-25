@@ -1,24 +1,30 @@
 import type { Task } from '../types/task'
 
-export const initialTasks: Task[] = []
+export const initialTasks: Task[] = JSON.parse(localStorage.getItem('tasks') || '[]')
 
 export const taskReducer = (state: Task[], action: { type: string, payload: Task }) => {
   const { type, payload } = action
+  let newState = state
 
   switch (type) {
     case 'ADD_TASK':
-      if (state.some(task => task.id === payload.id)) return state
-      return [...state, payload]
+      if (state.some(task => task.id === payload.id)) break
+      newState = [...state, payload]
+      break
     
     case 'REMOVE_TASK':
-      return state.filter(task => task.id !== payload.id)
+      newState = state.filter(task => task.id !== payload.id)
+      break
     
     case 'TOGGLE_TASK':
-      return state.map(task => task.id === payload.id ? { ...task, completed: !task.completed } : task)
+      newState = state.map(task => task.id === payload.id ? { ...task, completed: !task.completed } : task)
+      break
     
     case 'EDIT_TASK':
-      return state.map(task => task.id === payload.id ? { ...task, content: payload.content } : task)
+      newState = state.map(task => task.id === payload.id ? { ...task, content: payload.content } : task)
+      break
   }
 
-  return state
+  localStorage.setItem('tasks', JSON.stringify(newState))
+  return newState
 }
