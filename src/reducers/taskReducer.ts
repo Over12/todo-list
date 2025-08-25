@@ -7,6 +7,7 @@ export const taskReducer = (state: Task[], action: { type: string, payload: Task
 
   switch (type) {
     case 'ADD_TASK':
+      if (state.some(task => task.id === payload.id)) return state
       return [...state, payload]
     
     case 'REMOVE_TASK':
@@ -14,6 +15,9 @@ export const taskReducer = (state: Task[], action: { type: string, payload: Task
     
     case 'TOGGLE_TASK':
       return state.map(task => task.id === payload.id ? { ...task, completed: !task.completed } : task)
+    
+    case 'EDIT_TASK':
+      return state.map(task => task.id === payload.id ? { ...task, content: payload.content } : task)
   }
 
   return state

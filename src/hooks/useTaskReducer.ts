@@ -23,5 +23,9 @@ export const useTaskReducer = () => {
     dispatch({ type: 'TOGGLE_TASK', payload: task })
   }
 
-  return { tasks, addTask, removeTask, toggleTask }
+  const editTask = (task: Task) => {
+    dispatch({ type: 'EDIT_TASK', payload: task })
+  }
+
+  return { tasks, addTask, removeTask, toggleTask, editTask }
 }

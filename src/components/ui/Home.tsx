@@ -4,7 +4,7 @@ import Stats from './Stats'
 import TaskCard from '../common/TaskCard'
 
 export default function Home() {
-  const { tasks, addTask, removeTask, toggleTask } = useTaskReducer()
+  const { tasks, addTask, removeTask, toggleTask, editTask } = useTaskReducer()
 
   const handleAddTask = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
@@ -31,7 +31,7 @@ export default function Home() {
       </form>
       <div className='w-full max-h-96 overflow-y-auto flex flex-col items-center mt-3 gap-2'>
         {tasks.map(task => (
-          <TaskCard key={task.id} task={task} toggleTask={toggleTask} removeTask={removeTask} />
+          <TaskCard key={task.id} task={task} toggleTask={toggleTask} removeTask={removeTask} editTask={editTask} />
         ))}
       </div>
     </main>
