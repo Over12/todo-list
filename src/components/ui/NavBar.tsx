@@ -34,17 +34,17 @@ export default function NavBar() {
         </button>
       </nav>
       <ul className={`fixed sm:hidden top-0 right-0 bottom-0 z-40 h-dvh w-dvw uppercase bg-background text-text flex flex-col justify-center items-center gap-10 text-xl font-semibold transition-transform duration-500 ${menuOpen ? 'translate-x-0' : 'translate-x-full'}`}>
-        <Navigation />
+        <Navigation handleMenuToggle={handleMenuToggle} />
       </ul>
     </>
   )
 }
 
-function Navigation() {
+function Navigation({ handleMenuToggle }: { handleMenuToggle?: () => void }) {
   return (
     <>
-      <li><a href="#inicio">Inicio</a></li>
-      <li><a href="#contacto">Contacto</a></li>
+      <li><a href="#inicio" onClick={handleMenuToggle}>Inicio</a></li>
+      <li><a href="#contacto" onClick={handleMenuToggle}>Contacto</a></li>
     </>
   )
 }
