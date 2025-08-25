@@ -26,7 +26,7 @@ export default function NavBar() {
     <>
       <nav className='fixed px-10 sm:px-15 py-5 top-0 left-0 right-0 flex items-center justify-between text-text bg-background/50 backdrop-blur-lg border-b border-primary transition-colors z-50'>
         <div className='text-3xl font-bold animate-blurred-fade-in animate-duration-500'>
-          ToDo List
+          Notio
         </div>
         <ul className='hidden sm:flex gap-10 text-lg animate-blurred-fade-in animate-duration-500'>
           <Navigation />
