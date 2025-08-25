@@ -1,6 +1,11 @@
 import { IconSun, IconMoon, IconMenuDeep, IconX } from '@tabler/icons-react'
 import { useEffect, useState } from 'react'
 
+/**
+ * * Componente de Barra de Navegación.
+ * * Contiene la barra de navegación y la lógica de cambio de tema.
+ */
+
 export default function NavBar() {
   const [darkMode, setDarkMode] = useState<boolean>(true)
   const [menuOpen, setMenuOpen] = useState<boolean>(false)
@@ -39,6 +44,13 @@ export default function NavBar() {
     </>
   )
 }
+
+/**
+ * * Componente de Navegación.
+ * * Contiene los enlaces de navegación.
+ *
+ * @param handleMenuToggle - Función para manejar el cambio de estado del menú.
+ */
 
 function Navigation({ handleMenuToggle }: { handleMenuToggle?: () => void }) {
   return (

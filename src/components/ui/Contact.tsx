@@ -1,7 +1,12 @@
+/**
+ * * Componente de Contacto.
+ * * Contiene un formulario para enviar mensajes al autor.
+ */
+
 export default function Contact() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
-    alert('Formulario enviado!')
+    alert('Formulario enviado!') //! Lógica provisional para el envío del formulario
   }
 
   return (

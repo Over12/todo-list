@@ -1,6 +1,14 @@
 import type { Task } from '../types/task'
 
+// * Estado inicial de las tareas.
 export const initialTasks: Task[] = JSON.parse(localStorage.getItem('tasks') || '[]')
+
+/**
+ * * Reductor de tareas.
+ * @param state - Estado actual de las tareas.
+ * @param action - Acción a realizar.
+ * @returns Nuevo estado de las tareas.
+ */
 
 export const taskReducer = (state: Task[], action: { type: string, payload: Task }) => {
   const { type, payload } = action

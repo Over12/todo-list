@@ -2,20 +2,31 @@ import { IconCheck, IconCircle, IconCircleCheck, IconPencil, IconTrash, IconX } 
 import type { Task } from '../../types/task'
 import { useEffect, useRef, useState } from 'react'
 
+/**
+ * * Componente de tarjeta de tarea.
+ * @param task - Tarea a mostrar.
+ * @param toggleTask - Función para alternar el estado de la tarea.
+ * @param removeTask - Función para eliminar la tarea.
+ * @param editTask - Función para editar la tarea.
+ */
+
 export default function TaskCard({ task, toggleTask, removeTask, editTask }: { task: Task, toggleTask: (task: Task) => void, removeTask: (task: Task) => void, editTask: (task: Task) => void }) {
   const [isEditing, setIsEditing] = useState(false)
   const [editedContent, setEditedContent] = useState(task.content)
   const inputRef = useRef<HTMLInputElement>(null)
 
+  // Enfocar el input al entrar en modo edición
   useEffect(() => {
     if (isEditing && inputRef.current) {
       inputRef.current.focus()
     }
   }, [isEditing])
 
+  // Manejar la edición de la tarea
   const handleEdit = () => {
     setIsEditing(!isEditing)
 
+    // Restablecer el contenido editado si se cancela la edición
     if (isEditing) {
       setEditedContent(task.content)
     }

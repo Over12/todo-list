@@ -1,3 +1,8 @@
+/**
+ * * Componente de Pie de Página.
+ * * Contiene información sobre el autor y derechos de autor.
+ */
+
 export default function Footer() {
   return (
     <footer className='text-center text-sm sm:text-base p-5'>

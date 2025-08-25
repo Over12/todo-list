@@ -3,6 +3,12 @@ import { useTaskReducer } from '../../hooks/useTaskReducer'
 import Stats from './Stats'
 import TaskCard from '../common/TaskCard'
 
+/**
+ * * Componente de Inicio.
+ * * Contiene lógica para gestionar las tareas.
+ * * Muestra estadísticas sobre las tareas y formulario para agregar nuevas tareas.
+ */
+
 export default function Home() {
   const { tasks, addTask, removeTask, toggleTask, editTask } = useTaskReducer()
 

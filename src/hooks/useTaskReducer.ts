@@ -2,6 +2,11 @@ import { useReducer } from 'react'
 import { initialTasks, taskReducer } from '../reducers/taskReducer'
 import type { Task } from '../types/task'
 
+/**
+ * * Custom hook para el manejo del estado de las tareas.
+ * @returns Objeto con las tareas y funciones para manipularlas.
+ */
+
 export const useTaskReducer = () => {
   const [tasks, dispatch] = useReducer(taskReducer, initialTasks)
 

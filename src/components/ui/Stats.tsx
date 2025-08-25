@@ -2,6 +2,11 @@ import { IconCircle, IconCircleCheck, IconListDetails } from '@tabler/icons-reac
 import type { Task } from '../../types/task'
 import StatCard from '../common/StatCard'
 
+/**
+ * * Componente que muestra estadísticas sobre las tareas.
+ * @param tasks - Lista de tareas.
+ */
+
 export default function Stats({ tasks }: { tasks: Task[] }) {
   return (
     <div className='grid grid-cols-1 sm:grid-cols-3 gap-5 my-5 sm:my-10 w-full'>
